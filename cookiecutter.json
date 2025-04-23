@@ -4,6 +4,7 @@
     "author_name": "",
     "author_email": "",
     "python_version": ["3.11", "3.12", "3.13", "3.8", "3.9", "3.10"],
+    "create_src_layout": false,
     "create_polygon": true,
     "init_dev_env": true,
     "__project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
@@ -15,6 +16,7 @@
         "author_name": "Author name",
         "author_email": "Author email",
         "python_version": "Python version",
+        "create_src_layout": "Create project with src layout?",
         "create_polygon": "Create polygon.ipynb?",
         "init_dev_env": "Initialize dev environment? (.git, .venv)"
     }

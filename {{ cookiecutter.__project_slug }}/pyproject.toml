@@ -19,7 +19,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.version]
-path = "{{ cookiecutter.__project_slug }}/__init__.py"
+path = "{{ 'src/' if cookiecutter.create_src_layout }}{{ cookiecutter.__project_slug }}/__init__.py"
 
 [tool.ruff]
 exclude = [
