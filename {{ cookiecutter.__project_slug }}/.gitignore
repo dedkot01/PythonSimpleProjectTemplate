@@ -1,0 +1,9 @@
+.*
+!.gitignore
+
+__pycache__
+dist
+*.egg-info
+*.ipynb
+
+uv.lock

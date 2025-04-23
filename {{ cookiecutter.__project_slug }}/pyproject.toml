@@ -1,0 +1,46 @@
+[project]
+name = "{{ cookiecutter.__package_name }}"
+dynamic = ["version"]
+description = "{{ cookiecutter.description }}"
+readme = "README.md"{% if cookiecutter.author_name != "" and cookiecutter.author_email != "" %}
+authors = [
+    { name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}" },
+]{% endif %}
+requires-python = ">={{ cookiecutter.python_version }}"
+dependencies = []
+{% if cookiecutter.create_polygon %}
+[project.optional-dependencies]
+dev = [
+    "ipykernel",
+]
+{% endif %}
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "{{ cookiecutter.__project_slug }}/__init__.py"
+
+[tool.ruff]
+exclude = [
+    ".venv",
+]
+line-length = 80
+indent-width = 4
+target-version = "py{{ cookiecutter.__python_target_version }}"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D",
+]
+fixable = ["ALL"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+
+[tool.ruff.format]
+indent-style = "space"
