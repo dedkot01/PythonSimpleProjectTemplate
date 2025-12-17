@@ -7,7 +7,7 @@
     "create_src_layout": false,
     "create_polygon": true,
     "init_dev_env": true,
-    "__project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "__project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
     "__package_name": "{{ cookiecutter.__project_slug.replace('_', '-') }}",
     "__python_target_version": "{{ cookiecutter.python_version.replace('.', '') }}",
     "__prompts__": {
