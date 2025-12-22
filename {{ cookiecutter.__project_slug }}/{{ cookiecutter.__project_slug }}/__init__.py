@@ -1,1 +1,6 @@
-__version__ = "0.1.0"
+from importlib import metadata
+
+try:
+    __version__ = metadata.version("{{ cookiecutter.__package_name }}")
+except metadata.PackageNotFoundError:
+    __version__ = "local"
