@@ -5,5 +5,3 @@ __pycache__
 dist
 *.egg-info
 *.ipynb
-
-uv.lock
